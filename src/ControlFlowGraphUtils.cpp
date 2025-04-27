@@ -1,4 +1,4 @@
-#include "ControlFlowGraphUtils.h"
+#include "internal_includes/ControlFlowGraphUtils.h"
 
 #include "internal_includes/debug.h"
 #include "internal_includes/Instruction.h"

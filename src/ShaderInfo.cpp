@@ -1,7 +1,7 @@
 #include "ShaderInfo.h"
 #include "internal_includes/debug.h"
 #include "internal_includes/tokens.h"
-#include "Operand.h"
+#include "internal_includes/Operand.h"
 #include <stdlib.h>
 #include <sstream>
 #include <cctype>

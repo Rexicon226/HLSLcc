@@ -49,6 +49,27 @@ static bool CheckConstantBuffersNoDuplicateNames(const std::vector<ConstantBuffe
 
     return true;
 }
+HLSLCC_API int HLSLCC_APIENTRY TranslateHLSL(const char* shader
+//unsigned int flags,
+//GLLang language,
+//const GlExtensions* extensions,
+//GLSLCrossDependencyData* dependencies,
+//HLSLccSamplerPrecisionInfo& samplerPrecisions,
+//HLSLccReflection& reflectionCallbacks,
+//GLSLShader* result
+)
+{
+unsigned int flags {0};
+GLLang language { LANG_GL_LAST };
+GlExtensions extensions {0};
+GLSLCrossDependencyData dependencies;
+HLSLccSamplerPrecisionInfo samplerPrecisions {};
+HLSLccReflection reflectionCallbacks {};
+GLSLShader result;
+
+int success = TranslateHLSLFromMem(shader, flags, language, &extensions, nullptr, samplerPrecisions, reflectionCallbacks, &result);
+return success;
+}
 
 HLSLCC_API int HLSLCC_APIENTRY TranslateHLSLFromMem(const char* shader,
     unsigned int flags,
